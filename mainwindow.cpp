@@ -11,7 +11,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     for(int i = 0; i < 100000; i++){
    // wordList << "alpha" << "omega" << "omicron" << "zeta";
-        wordList << "alpha"+ QString("%1").arg(i,5,10,QChar('0'));;
+        wordList << "alpha"+ QString("%1").arg(i,5,10,QChar('0'));; //fill with 0
     }
 //    QLineEdit *lineEdit = new QLineEdit(this);
 
