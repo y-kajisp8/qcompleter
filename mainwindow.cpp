@@ -10,14 +10,13 @@ MainWindow::MainWindow(QWidget *parent)
     QStringList wordList;
 
     for(int i = 0; i < 100000; i++){
-   // wordList << "alpha" << "omega" << "omicron" << "zeta";
-        wordList << "alpha"+ QString("%1").arg(i,5,10,QChar('0'));; //fill with 0
+        //  wordList << "alpha" << "omega" << "omicron" << "zeta";
+        wordList << "alpha"+ QString("%1").arg(i,5,10,QChar('0'));; //  fill with 0
     }
-//    QLineEdit *lineEdit = new QLineEdit(this);
 
     QCompleter *completer = new QCompleter(wordList, this);
 
-//    completer->setCaseSensitivity(Qt::CaseInsensitive);
+    //  completer->setCaseSensitivity(Qt::CaseInsensitive);
     completer->setFilterMode(Qt::MatchContains);
 
     QTableView *popup = new QTableView();
